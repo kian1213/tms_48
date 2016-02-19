@@ -114,3 +114,33 @@ en:
         add: Add
       show_tasks:
         list: List of Tasks
+    users:
+      index:
+        header_title: Users
+        avatar: Avatar
+        name: Full Name
+        email: Email Address
+        type: User Type
+        admin: Admin
+        add: Add
+        delete: You want to delete?
+      show:
+        title: User
+        name: Full Name
+        email: Email Address
+        type: User Type
+        admin: Admin
+        add: Add
+        edit: Edit
+      new:
+        header_title: Users
+        title: Add User
+      edit:
+        header_title: Users
+        title:  Edit User
+      create:
+        success: User successfully created!
+      update:
+        success: User successfully updated!
+      destroy:
+        destroy: User successfully destroyed!
