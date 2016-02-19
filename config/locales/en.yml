@@ -56,8 +56,8 @@ en:
       about_text2: Code and Design Lovers.
       about_teammember1: Grace Sojor
       about_teammember2: Christian Angel Galamay
-      about_paragraph1: A self-confessed nocturnal and usually quiet person. She enjoys reading and surfing the net. She digs in more in hardware and software. Learning something new is one of her enjoyable challenges. 
-      about_paragraph2: The typical cool guy who enjoys coding and food :) 
+      about_paragraph1: A self-confessed nocturnal and usually quiet person. She enjoys reading and surfing the net. She digs in more in hardware and software. Learning something new is one of her enjoyable challenges.
+      about_paragraph2: The typical cool guy who enjoys coding and food :)
     contact:
       contact_desc: Get in touch with us
       contact_text: Don't shy away! Drop us an email here grace.m.sojor@framgia.com and chrisitian.angel.g.galamay@framgia.com
@@ -80,7 +80,37 @@ en:
         title: Sign up
         char_min: characters minimum
         submit: Sign up
-    session:
+    sessions:
       new:
         title: Sign in Now
         signin: Sign In
+  admin:
+    subjects:
+      index:
+        header_title: Subjects
+        title: Subject Title
+        instruction: Subject Instruction
+        add: Add
+        delete: You want to delete?
+      new:
+        header_title: Subjects
+        title: Add Subject
+      edit:
+        header_title: Subjects
+        title:  Edit Subject
+      form:
+        list_of_tasks: List of Tasks
+        add_task: Add Task
+        add_new_task: Add Task
+      create:
+        success: Subject successfully created!
+      update:
+        success: Subject successfully updated!
+      destroy:
+        destroy: Subject successfully destroyed!
+      show:
+        title: Subjects
+        edit: Edit
+        add: Add
+      show_tasks:
+        list: List of Tasks

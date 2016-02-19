@@ -1,0 +1,12 @@
+<b><%= t ".list" %></b>
+<table class="table table-striped table-advance table-hover">
+  <tbody>
+    <% @subject_tasks.each do |task| %>
+      <tr>
+        <td>
+          <%= task.title %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
