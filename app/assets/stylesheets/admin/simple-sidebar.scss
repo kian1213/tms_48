@@ -13,12 +13,12 @@
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
-  left: 250px;
+  left: 300px;
   width: 0;
   height: 100%;
-  margin-left: -250px;
+  margin-left: -300px;
   overflow-y: auto;
-  background: #000;
+  background: #5bc2ce;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -45,7 +45,7 @@
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 200px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -59,7 +59,8 @@
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #999999;
+  color: #ffffff;
+
 }
 
 .sidebar-nav li a:hover {
@@ -86,6 +87,10 @@
 .sidebar-nav > .sidebar-brand a:hover {
   color: #fff;
   background: none;
+}
+
+.active-menu {
+  background-color: #C90000!important;
 }
 
 @media(min-width:768px) {
