@@ -23,6 +23,8 @@ en:
   layouts:
     application:
       app_title: Framgia Training Management System
+    admin:
+      app_title: Framgia Training Management System Admin
     header:
       tablink_website: http://www.framgia.com
       tablink_home: Home
@@ -34,6 +36,16 @@ en:
       button_about: About this Project |
       button_contact: Contact |
       button_help: Help
+  partials_admin:
+    header:
+      title: Framgia Training Management System Admin
+      logout: Logout
+    sidebar:
+      side_title: Framgia TMS
+      dashboard: Dashboard
+      courses: List of Courses
+      subjects: List of Subjects
+      users: List of Users
   static_pages:
     index:
       intro_welcome: Welcome to Framgia Training Management System
@@ -52,4 +64,23 @@ en:
     help:
       help_desc: Help
       help_text: We got you covered. We will guide you all the way.
-  
+  users:
+    registrations:
+      edit:
+        title: Edit
+        blank: (leave blank if you don't want to change it)
+        current: (we need your current password to confirm your changes)
+        submit: Update
+        cancel: Cancel my account
+        cancel_account: Cancel my account
+        confirm: Are you sure?
+        back: Back
+        unhappy: Unhappy?
+      new:
+        title: Sign up
+        char_min: characters minimum
+        submit: Sign up
+    session:
+      new:
+        title: Sign in Now
+        signin: Sign In
