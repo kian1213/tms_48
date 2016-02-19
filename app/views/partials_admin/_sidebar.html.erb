@@ -4,13 +4,17 @@
       <%= link_to t(".side_title"), admin_root_path %>
     </li>
     <li>
-      <%= link_to t(".users"), admin_users_path %>
+      <i class="fa fa-qrcode fa-2x"><a><%= link_to t(".users"), "#" %></a></i>
     </li>
     <li>
-      <%= link_to t(".courses"), "#" %>
+      <i class="fa fa-table fa-2x"><a><%= link_to t(".courses"), "#" %></a></i>
     </li>
     <li>
-      <%= link_to t(".subjects"), admin_subjects_path %>
+      <i class="fa fa-edit fa-2x"><a><%= link_to t(".subjects"), admin_subjects_path %></a></i>
     </li>
-  </ul>
+    <li>
+      <i class="fa fa-square-o fa-2x"><a><%= link_to t(".homepage"), root_path %></a></i>
+    </li>
+  </ul>  
 </div>
+

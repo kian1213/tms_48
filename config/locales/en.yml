@@ -43,9 +43,11 @@ en:
     sidebar:
       side_title: Framgia TMS
       dashboard: Dashboard
-      courses: List of Courses
-      subjects: List of Subjects
-      users: List of Users
+      courses: Courses
+      subjects: Subjects
+      users: Users
+      homepage: View Main
+
   static_pages:
     index:
       intro_welcome: Welcome to Framgia Training Management System
