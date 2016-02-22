@@ -123,7 +123,6 @@ en:
         name: Full Name
         email: Email Address
         type: User Type
-        admin: Admin
         add: Add
         delete: You want to delete?
       show:
@@ -131,7 +130,6 @@ en:
         name: Full Name
         email: Email Address
         type: User Type
-        admin: Admin
         add: Add
         edit: Edit
       new:

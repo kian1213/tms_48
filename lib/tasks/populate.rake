@@ -14,8 +14,7 @@ namespace :db do
       last_name: "Doe",
       email: "admin@example.com",
       password: "admin123",
-      user_type: "supervisor",
-      admin: true,
+      user_type: 0,
       avatar: File.open(File.join(Rails.root, "/app/assets/images/seed/default.jpg"))
     )
     puts "done populating default admin"
