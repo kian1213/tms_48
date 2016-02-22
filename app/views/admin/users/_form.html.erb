@@ -33,14 +33,8 @@
   <div class="form-group">
     <%= f.label :user_type, class: "col-md-2 control-label" %>
     <div class="col-md-10">
-      <%= f.select :user_type, ["supervisor", "trainee"], {},
+      <%= f.select :user_type, ["admin", "supervisor", "trainee"], {},
         {class: "form-control"} %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :admin, class: "col-md-2 control-label" %>
-    <div class="col-md-10">
-      <%= f.check_box :admin, class: "form-control" %>
     </div>
   </div>
   <div class="form-group">

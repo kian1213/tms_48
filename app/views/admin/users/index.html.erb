@@ -16,7 +16,6 @@
             <th><%= t ".name" %></th>
             <th><%= t ".email" %></th>
             <th><%= t ".type" %></th>
-            <th><%= t ".admin" %></th>
           </tr>
         </thead>
         <tbody>
@@ -26,7 +25,6 @@
               <td><%= user.full_name %></td>
               <td><%= user.email %></td>
               <td><%= user.user_type %></td>
-              <td><%= user.admin %></td>
               <td>
                 <div class="admin-actions">
                   <%= link_to admin_user_path(user), class: "button btn btn-success btn-xs" do %>
