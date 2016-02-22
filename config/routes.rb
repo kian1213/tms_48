@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   get     "contact"     => "static_pages#contact", as: "contact"
   get     "help"        => "static_pages#help", as: "help"
 
+  resources :users do
+    member do
+      resources :courses
+    end
+  end
+
   namespace :admin do
     root "users#index"
     resources :users
