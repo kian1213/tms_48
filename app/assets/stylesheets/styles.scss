@@ -13,7 +13,6 @@ hr {
 
 .user-profile {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .wordlist-menu {
@@ -77,12 +76,6 @@ hr {
   margin-left: 25px;
 }
 
-.result-avatar {
-  margin-top: 35px;
-  margin-left: 220px;
-  border: solid;
-}
-
 .lesson-submit {
   margin-right: 30px;
   margin-top: 30px;
@@ -98,15 +91,8 @@ hr {
   }
 }
 
-.user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-  a {
-    padding: 0;
-  }
+.user-avatar {
+  border: solid;
 }
 
 .user-index {
@@ -267,3 +253,4 @@ i {
     margin: 8px;
     color: #3498db;
 }
+

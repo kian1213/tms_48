@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   has_many :supervisor_courses
   has_many :courses, through: :supervisor_courses
+  has_many :courses
   has_many :activities, as: :target
   has_many :user_courses
   has_many :user_subjects

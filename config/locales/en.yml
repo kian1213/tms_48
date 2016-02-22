@@ -28,7 +28,14 @@ en:
     header:
       tablink_website: http://www.framgia.com
       tablink_home: Home
-      tablink_member: Already a Member?
+      tablink_courses: Courses List
+      tablink_supervisors: Supervisors
+      tablink_trainees: Trainees
+      tablink_account: My Account
+      tablink_profile: My profile
+      tablink_setting: Edit my Profile
+      tablink_login: Log In
+      tablink_logout: Log Out
     footer:
       footer_text: Learn on the go. We built the best for you.
       footer_text_more: Our training management system is a flexible custom-built tool made for everyone.
@@ -47,7 +54,9 @@ en:
       subjects: Subjects
       users: Users
       homepage: View Main
-
+  shared:
+    user_activities:
+      title: Activities
   static_pages:
     index:
       intro_welcome: Welcome to Framgia Training Management System
