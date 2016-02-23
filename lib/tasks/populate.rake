@@ -17,6 +17,22 @@ namespace :db do
       user_type: 0,
       avatar: File.open(File.join(Rails.root, "/app/assets/images/seed/default.jpg"))
     )
-    puts "done populating default admin"
+    User.create(
+      first_name: "Tony",
+      last_name: "Stark",
+      email: "supervisor@example.com",
+      password: "password",
+      user_type: 1,
+      avatar: File.open(File.join(Rails.root, "/app/assets/images/seed/default.jpg"))
+    )
+    User.create(
+      first_name: "Bruce",
+      last_name: "Wayne",
+      email: "trainee@example.com",
+      password: "password",
+      user_type: 2,
+      avatar: File.open(File.join(Rails.root, "/app/assets/images/seed/default.jpg"))
+    )
+    puts "done populating default users"
   end
 end

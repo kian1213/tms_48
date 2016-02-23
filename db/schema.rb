@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 20160218080751) do
   end
 
   create_table "course_subjects", force: :cascade do |t|
-    t.integer  "course_id",   limit: 4
-    t.integer  "subjects_id", limit: 4
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.integer  "course_id",  limit: 4
+    t.integer  "subject_id", limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "courses", force: :cascade do |t|
@@ -81,8 +81,9 @@ ActiveRecord::Schema.define(version: 20160218080751) do
     t.integer  "user_subject_id", limit: 4
     t.integer  "user_id",         limit: 4
     t.integer  "task_id",         limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "status",          limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade do |t|
