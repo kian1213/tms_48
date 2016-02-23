@@ -20,6 +20,31 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  courses:
+    course_subject_fields:
+      remove: Remove
+    form:
+      list_of_subjects: List of Subjects
+      add_subject: Add Subject
+      add_new_subject: Add Subject
+    edit:
+      header_title: Supervisor Course
+      title: Edit Course
+    new:
+      header_title: Supervisor Course
+      title: New Course
+    show:
+      title: Course
+      start_date: Start Date
+      end_date: End Date
+      status: Status
+      list: Subject List
+    create:
+      success: Course successfully created
+    update:
+      success: Course successfully updated
+    destroy:
+      success: Course successfully deleted
   layouts:
     application:
       app_title: Framgia Training Management System
@@ -75,6 +100,15 @@ en:
     help:
       help_desc: Help
       help_text: We got you covered. We will guide you all the way.
+  user_courses:
+    index:
+      header_title: My Courses
+      add: Add
+      title: Course Title
+      start_date: Start Date
+      end_date: End Date
+      status: Status
+      delete: You want to Delete?
   users:
     registrations:
       edit:
