@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  time:
+    formats:
+      short: "%m/%d/%Y"
   courses:
     course_subject_fields:
       remove: Remove

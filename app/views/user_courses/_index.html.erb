@@ -24,8 +24,8 @@
           <% @user.courses.each do |course| %>
             <tr>
               <td><%= course.title %></td>
-              <td><%= course.start_date %></td>
-              <td><%= course.end_date %></td>
+              <td><%= datetime course.start_date %></td>
+              <td><%= datetime course.end_date %></td>
               <td><%= course.status %></td>
               <td>
                 <div class="admin-actions">

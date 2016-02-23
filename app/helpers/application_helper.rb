@@ -13,4 +13,8 @@ module ApplicationHelper
     link_to name, "#", onclick: h("add_fields(this, \"#{association}\",
       \"#{escape_javascript(fields)}\")"), class: cssClass, title: title, remote: true
   end
+
+  def datetime date
+    I18n.l date, format: :short
+  end
 end
