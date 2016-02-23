@@ -54,6 +54,8 @@ en:
       subjects: Subjects
       users: Users
       homepage: View Main
+      onlinestatus: Online
+      main_navigation: MAIN NAVIGATION
   shared:
     user_activities:
       title: Activities

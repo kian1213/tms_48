@@ -18,7 +18,7 @@
   height: 100%;
   margin-left: -300px;
   overflow-y: auto;
-  background: #5bc2ce;
+  background: #edebe1;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -42,25 +42,106 @@
 
 /* Sidebar Styles */
 
+.nav {
+  padding: 0;
+}
+
+.nav > li {
+  border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+}
+
+.user-panel{
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  background: #FFBF00;
+}
+
+.user-panel >.info { 
+  color: #fff;
+}
+
+.user-panel >.info {
+  padding: 10px 10px 10px 15px;
+  line-height: 0;
+  position: absolute;
+  left: 65px;
+}
+
+.pull-left {
+  float: left!important;
+}
+
+.user-panel > .info > a > .fa {
+  margin-right: 3px;
+}
+
+.user-panel > .info > a {
+  color: #fff;
+}
+
+.user-panel > .info > p {
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.user-panel > .image > img {
+  width: 100%;
+  max-width: 45px;
+  height: auto;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.fa-2x {
+  font-size: 10px; 
+}
+
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 200px;
+  width: 250px;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 .sidebar-nav li {
-  text-indent: 20px;
+  text-indent: 10px;
   line-height: 40px;
+}
+
+li.header {
+  color: #ffffff;
+  background: #3498db;
+  text-indent: 10px;
+  line-height: 40px;
+}
+
+.sidebar-nav > li.header {
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.active-menu {
+  background-color: #C90000!important;
 }
 
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #ffffff;
-
+  color: #ffffff; 
+  position: relative;
+  border-left: 3px solid transparent;
+  width: 20px;
+  margin: 0;
+  padding: 15px 10px;
 }
 
 .sidebar-nav li a:hover {
@@ -69,7 +150,12 @@
   background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav li a:active,
+.sidebar-nav li a:active{
+  color: #fff;
+  background: #1e282c;
+  border-left-color: #3c8dbc;
+}
+
 .sidebar-nav li a:focus {
   text-decoration: none;
 }
@@ -80,6 +166,10 @@
   line-height: 60px;
 }
 
+.sidebar-brand {
+  background: #3498db;
+}
+
 .sidebar-nav > .sidebar-brand a {
   color: #999999;
 }
@@ -87,10 +177,6 @@
 .sidebar-nav > .sidebar-brand a:hover {
   color: #fff;
   background: none;
-}
-
-.active-menu {
-  background-color: #C90000!important;
 }
 
 @media(min-width:768px) {

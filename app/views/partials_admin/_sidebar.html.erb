@@ -1,20 +1,71 @@
 <div id="sidebar-wrapper">
-  <ul class="sidebar-nav">
+  <ul class="nav" id="main-menu">
     <li class="sidebar-brand">
-      <%= link_to t(".side_title"), admin_root_path %>
+      <%= link_to image_tag("framgia_logo.png", alt: "Framgia logo", size:"50x50"),
+      t(".side_title") %>
+    </li>
+    <div class="user-panel">
+      <div class="pull-left image">
+        <%= link_to image_tag(current_user.avatar, size: "60x60")%>
+      </div>
+      <div class="pull-left info">
+        <p>
+          <span class="hidden-xs">
+            <%= current_user.full_name %>
+          </span>
+        </p>
+        <a><i class="fa fa-circle text-success"></i><%= t(".onlinestatus")%></a>
+      </div>
+    </div>
+    <li class="header">
+      <%= t(".main_navigation")%>
     </li>
     <li>
-      <i class="fa fa-qrcode fa-2x"><a><%= link_to t(".users"), "#" %></a></i>
+      <i class="fa fa-qrcode fa-2x">
+        <a class="active-menu">
+          <span>
+            <%= link_to t(".users"), admin_users_path %>
+          </span>
+          <span class="label label-primary pull-right">
+            <%= User.count %>
+          </span>
+        </a>
+      </i>
     </li>
     <li>
-      <i class="fa fa-table fa-2x"><a><%= link_to t(".courses"), "#" %></a></i>
+      <i class="fa fa-table fa-2x">
+        <a>
+          <span>
+            <%= link_to t(".courses"), "#" %>
+          </span>
+          <span class="label label-primary pull-right">
+            <%= Course.count %>
+          </span>
+        </a>
+      </i>
     </li>
     <li>
-      <i class="fa fa-edit fa-2x"><a><%= link_to t(".subjects"), admin_subjects_path %></a></i>
+      <i class="fa fa-edit fa-2x">
+        <a>
+          <span>
+            <%= link_to t(".subjects"), admin_subjects_path %>
+          </span>
+          <span class="label label-primary pull-right">
+            <%= Subject.count %>
+          </span>
+        </a>
+      </i>
     </li>
     <li>
-      <i class="fa fa-square-o fa-2x"><a><%= link_to t(".homepage"), root_path %></a></i>
+      <i class="fa fa-square-o fa-2x">
+        <a>
+          <span>
+            <%= link_to t(".homepage"), root_path %>
+          </span>
+        </a>
+      </i>
     </li>
-  </ul>  
+  </ul>
 </div>
+
 
