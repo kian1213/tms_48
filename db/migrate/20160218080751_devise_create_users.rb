@@ -39,7 +39,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
     create_table :course_subjects do |t|
       t.references :course
-      t.references :subjects
+      t.references :subject
 
       t.timestamps null: false
     end
@@ -78,6 +78,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.references :user_subject
       t.references :user
       t.references :task
+      t.string     :status
 
       t.timestamps null: false
     end
