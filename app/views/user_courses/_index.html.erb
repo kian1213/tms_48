@@ -3,7 +3,7 @@
   <div class="row mt">
     <div class="content-panel">
       <% if can? :create, Course %>
-        <%= link_to new_course_path, class: "btn btn-success btn-xs
+        <%= link_to new_user_course_path(current_user.id), class: "btn btn-success btn-xs
           pull-right btn-panel" do %>
           <i class="fa fa-plus-circle">
             <%= t ".add" %>
@@ -30,17 +30,19 @@
               <td>
                 <div class="admin-actions">
                   <% if can? :read, Course %>
-                    <%= link_to course_path(course), class: "button btn btn-success btn-xs" do %>
+                    <%= link_to user_course_path(current_user.id, course.id),
+                      class: "button btn btn-success btn-xs" do %>
                       <i class="fa fa-file-text"></i>
                     <% end %>
                   <% end %>
                   <% if can? :update, Course %>
-                    <%= link_to edit_course_path(course), class: "button btn btn-primary btn-xs" do %>
+                    <%= link_to edit_user_course_path(current_user.id, course.id),
+                      class: "button btn btn-primary btn-xs" do %>
                       <i class="fa fa-pencil"></i>
                     <% end %>
                   <% end %>
                   <% if can? :destroy, Course %>
-                    <%= link_to course_path(course), method: :delete,
+                    <%= link_to user_course_path(current_user.id, course.id), method: :delete,
                       data: {confirm: t(".delete")}, class: "button btn btn-danger btn-xs" do %>
                       <i class="fa fa-trash-o"></i>
                     <% end %>

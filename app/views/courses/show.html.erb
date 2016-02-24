@@ -6,6 +6,10 @@
       </i>
     <% end %>
   </h3>
+  <% if can? :create, SupervisorCourse %>
+    <%= link_to "Add Supervisor", new_user_course_supervisor_course_path(current_user.id, @course.id),
+      class: "btn btn-success btn-xs" %>
+  <% end %>
   <div class="row mt">
     <div class="col-md-9">
       <div class="panel-body">

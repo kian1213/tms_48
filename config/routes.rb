@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get     "help"        => "static_pages#help", as: "help"
 
   resources :users do
-    member do
-      resources :courses
+    resources :courses do
+      resources :supervisor_courses
     end
   end
 
