@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   load_and_authorize_resource
-  before_action :load_all_subjects, on: [:new, :edit]
+  before_action :load_subjects, only: [:new, :edit]
 
   def create
     if @course.save course_params
@@ -33,7 +33,9 @@ class CoursesController < ApplicationController
       :status, course_subjects_attributes: [:id, :course_id, :subject_id, :_destroy]
   end
 
-  def load_all_subjects
-    @subjects = Subject.all
+  def load_subjects
+    Subject.all.each do |subject|
+      @course.course_subjects.new subject: subject unless @course.subjects.include? subject
+    end
   end
 end

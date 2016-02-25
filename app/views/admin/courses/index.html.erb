@@ -11,8 +11,8 @@
           </div>
           <div class="panel-body">
             <% if can? :create, Course %>
-              <%= link_to new_admin_course_path, class: "btn btn-success btn-xs
-                pull-right btn-panel" do %>
+              <%= link_to new_admin_user_course_path(current_user.id),
+                class: "btn btn-success btn-xs pull-right btn-panel" do %>
                 <i class="fa fa-plus-circle">
                   <%= t ".add" %>
                 </i>
@@ -23,6 +23,7 @@
               <thead>
                 <tr>
                   <th><%= t ".title" %></th>
+                  <th><%= t ".description" %></th>
                   <th><%= t ".start_date" %></th>
                   <th><%= t ".end_date" %></th>
                   <th><%= t ".status" %></th>
@@ -35,28 +36,28 @@
                       <%= course.title %>
                     </td>
                     <td>
-                      <%= course.description %>              
+                      <%= course.description %>
                     </td>
                     <td>
-                      <%= course.start_date %>              
+                      <%= datetime course.start_date %>
                     </td>
                     <td>
-                      <%= course.end_date %>              
+                      <%= datetime course.end_date %>
                     </td>
                     <td>
-                      <%= course.status %>              
+                      <%= course.status %>
                     </td>
                     <td>
                       <div class="admin-actions">
-                        <%= link_to  admin_course_path(course),
+                        <%= link_to  admin_user_course_path(current_user.id, course.id),
                           class: "button btn btn-success btn-xs" do %>
                           <i class="fa fa-file-text"></i>
                         <% end %>
-                        <%= link_to edit_admin_course_path(course),
+                        <%= link_to edit_admin_user_course_path(current_user.id, course.id),
                           class: "button btn btn-primary btn-xs" do %>
                           <i class="fa fa-pencil"></i>
                         <% end %>
-                        <%= link_to admin_course_path(course), method: :delete,
+                        <%= link_to admin_user_course_path(current_user.id, course.id), method: :delete,
                           data: {confirm: "You want to delete?"},
                           class: "button btn btn-danger btn-xs" do %>
                           <i class="fa fa-trash-o"></i>
