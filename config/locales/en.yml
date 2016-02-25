@@ -23,31 +23,6 @@ en:
   time:
     formats:
       short: "%m/%d/%Y"
-  courses:
-    course_subject_fields:
-      remove: Remove
-    form:
-      list_of_subjects: List of Subjects
-      add_subject: Add Subject
-      add_new_subject: Add Subject
-    edit:
-      header_title: Supervisor Course
-      title: Edit Course
-    new:
-      header_title: Supervisor Course
-      title: New Course
-    show:
-      title: Course
-      start_date: Start Date
-      end_date: End Date
-      status: Status
-      list: Subject List
-    create:
-      success: Course successfully created
-    update:
-      success: Course successfully updated
-    destroy:
-      success: Course successfully deleted
   layouts:
     application:
       app_title: Framgia Training Management System
@@ -111,6 +86,7 @@ en:
     index:
       title: My Courses
       add: Add
+      description: Description
       start_date: Start Date
       end_date: End Date
       status: Status
@@ -137,25 +113,36 @@ en:
         signin: Sign In
   admin:
     courses:
-      index:
-        title: Courses
-        courses: Course Title
-        course_description: Description
+      edit:
+        header_title: Supervisor Course
+        title: Edit Course
+        list_of_subjects: List of Subjects
+        add_subject: Add Subject
+        add_new_subject: Add Subject
+        select: Select
+        subject_title: Subject Title
+        instruction: Instruction
+      new:
+        header_title: Supervisor Course
+        title: New Course
+        list_of_subjects: List of Subjects
+        add_subject: Add Subject
+        add_new_subject: Add Subject
+        select: Select
+        subject_title: Subject Title
+        instruction: Instruction
+      show:
+        title: Course
         start_date: Start Date
         end_date: End Date
-        course_status: Status
-        content_action: Action
-      new:
-        title: Add New Courses
-        add_subject: Add Subject
-        remove: Remove
-      edit:
-        title: Edit this Course
-      form:
-        add_new_subject: Add Subject
-      show:
-        subjects: Subjects
-        title: Course Listing and Subjects  
+        status: Status
+        list: Subject List
+      create:
+        success: Course successfully created
+      update:
+        success: Course successfully updated
+      destroy:
+        success: Course successfully deleted
     subjects:
       index:
         header_title: Subjects
