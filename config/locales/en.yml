@@ -64,6 +64,30 @@ en:
   shared:
     user_activities:
       title: Activities
+    user_course_list:
+      title_courses: Course List
+      text_mycourses: My Courses
+      text_mycurrentcourses: Current Course
+      text_currentcourseshere: --Current Course Here--
+    user_info:
+      title: About Me
+      text_education: Education
+      text_educationhere: --Education Data Here--
+      text_location: Location
+      text_locationhere: --Location Data Here--
+      text_skills: Skills
+      text_skillshere: --Skills Data Here--
+      text_notes: --Notes--
+      text_noteshere: --Notes Here--
+    user_progress:
+      text_myrecord: My Record
+      text_activecourses: Active Courses
+      text_activesubjects: Active Subjects
+      text_taskcompleted: Task Completed
+      text_pendingtasks: Pending Tasks
+      text_coursesenrolled: Courses Enrolled
+      text_coursescompleted: Courses Completed
+      text_supervisors: Supervisors
   static_pages:
     index:
       intro_welcome: Welcome to Framgia Training Management System
@@ -129,6 +153,8 @@ en:
         start_date: Start Date
         end_date: End Date
         status: Status
+        supervisor_count: Supervisors
+        trainee_count: Trainees
         add: Add
       new:
         header_title: Supervisor Course
@@ -141,17 +167,27 @@ en:
         instruction: Instruction
       show:
         title: Course
-        add_member: Add Member
         start_date: Start Date
         end_date: End Date
         status: Status
+        supervisors: Supervisors
+        trainees: Trainees
+        supervisor_list: List of Supervisors
+        trainee_list: List of Trainees
         list: Subject List
+        close: Close
       create:
         success: Course successfully created
       update:
         success: Course successfully updated
       destroy:
         success: Course successfully deleted
+    course_supervisor:
+      name: Full Name
+      email: Email Address
+    course_trainee:
+      name: Full Name
+      email: Email Address
     subjects:
       index:
         header_title: Subjects
@@ -181,14 +217,6 @@ en:
         add: Add
       show_tasks:
         list: List of Tasks
-    supervisor_courses:
-      show:
-        title: Add/Remove Member
-        supervisors: Supervisors
-        trainees: Trainees
-        select: Select
-        name: Full Name
-        email: Email
     users:
       index:
         header_title: Users

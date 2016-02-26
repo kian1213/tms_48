@@ -1,8 +1,18 @@
-<div class="row">
-  <div class="col-md-4">
-    <%= render "shared/user_profile" %>
+<section class="content">
+  <div class="row">
+    <% if user_signed_in? %>
+      <div class="col-md-3">
+        <%= render "shared/user_profile" %>
+        <% if current_user.trainee? %>
+          <%= render "shared/user_progress" %>
+          <%= render "shared/user_info" %>
+        <% end %>
+      </div>
+      <div class="col-md-9">
+        <% if current_user.trainee? %>
+          <%= render "shared/user_course_list" %>
+        <% end %>        
+      </div>
+    <% end %>
   </div>
-  <div class="col-md-8">
-    <%= render "user_courses/index" %>
-  </div>
-</div>
+</section>

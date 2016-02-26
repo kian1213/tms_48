@@ -1,0 +1,16 @@
+<table class="table table-striped table-advance table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".name" %></th>
+      <th><%= t ".email" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @course.user_courses.each do |trainee| %>
+      <tr>
+        <td><%= trainee.user.full_name %></td>
+        <td><%= trainee.user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
