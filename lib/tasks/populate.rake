@@ -14,24 +14,21 @@ namespace :db do
       last_name: "Doe",
       email: "admin@example.com",
       password: "admin123",
-      user_type: 0,
-      avatar: File.open(File.join(Rails.root, "/app/assets/images/seed/default.jpg"))
+      user_type: 0
     )
     User.create(
       first_name: "Tony",
       last_name: "Stark",
       email: "supervisor@example.com",
       password: "password",
-      user_type: 1,
-      avatar: File.open(File.join(Rails.root, "/app/assets/images/seed/default.jpg"))
+      user_type: 1
     )
     User.create(
       first_name: "Bruce",
       last_name: "Wayne",
       email: "trainee@example.com",
       password: "password",
-      user_type: 2,
-      avatar: File.open(File.join(Rails.root, "/app/assets/images/seed/default.jpg"))
+      user_type: 2
     )
     puts "done populating default users"
   end
