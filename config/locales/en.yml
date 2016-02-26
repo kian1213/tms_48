@@ -129,6 +129,8 @@ en:
         start_date: Start Date
         end_date: End Date
         status: Status
+        supervisor_count: Supervisors
+        trainee_count: Trainees
         add: Add
       new:
         header_title: Supervisor Course
@@ -145,13 +147,24 @@ en:
         start_date: Start Date
         end_date: End Date
         status: Status
+        supervisors: Supervisors
+        trainees: Trainees
+        supervisor_list: List of Supervisors
+        trainee_list: List of Trainees
         list: Subject List
+        close: Close
       create:
         success: Course successfully created
       update:
         success: Course successfully updated
       destroy:
         success: Course successfully deleted
+    course_supervisor:
+      name: Full Name
+      email: Email Address
+    course_trainee:
+      name: Full Name
+      email: Email Address
     subjects:
       index:
         header_title: Subjects
