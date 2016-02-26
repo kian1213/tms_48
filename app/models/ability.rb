@@ -12,6 +12,10 @@ class Ability
       can :read, Subject
       can :update, Subject
       can :read, User
+      can :create, SupervisorCourse
+      can :read, SupervisorCourse
+      can :update, SupervisorCourse
+      can :destroy, SupervisorCourse
     else
       can :read, Course
       can :read, Subject

@@ -122,6 +122,14 @@ en:
         select: Select
         subject_title: Subject Title
         instruction: Instruction
+      index:
+        header_title: Courses
+        title: Course Title
+        description: Description
+        start_date: Start Date
+        end_date: End Date
+        status: Status
+        add: Add
       new:
         header_title: Supervisor Course
         title: New Course
@@ -133,6 +141,7 @@ en:
         instruction: Instruction
       show:
         title: Course
+        add_member: Add Member
         start_date: Start Date
         end_date: End Date
         status: Status
@@ -172,6 +181,14 @@ en:
         add: Add
       show_tasks:
         list: List of Tasks
+    supervisor_courses:
+      show:
+        title: Add/Remove Member
+        supervisors: Supervisors
+        trainees: Trainees
+        select: Select
+        name: Full Name
+        email: Email
     users:
       index:
         header_title: Users

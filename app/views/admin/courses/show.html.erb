@@ -1,6 +1,6 @@
 <section class="wrapper">
   <h3>
-    <%= link_to current_user do %>
+    <%= link_to admin_user_courses_path(current_user.id) do %>
       <i class="fa fa-angle-right">
         <%= t ".title" %>
       </i>
@@ -10,6 +10,10 @@
     <div class="col-md-9">
       <div class="panel-body">
         <div class="jumbotron">
+          <% if can? :create, SupervisorCourse %>
+            <%= link_to t(".add_member"), admin_course_supervisor_courses_path(@course.id),
+              class: "btn btn-success btn-xs" %>
+          <% end %>
           <h2><%= @course.title %></h2>
           <br>
           <%= @course.description %>

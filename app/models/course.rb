@@ -13,4 +13,7 @@ class Course < ActiveRecord::Base
 
   accepts_nested_attributes_for :course_subjects, reject_if:
     lambda {|a| a[:subject_id].blank?}, allow_destroy: true
+
+  accepts_nested_attributes_for :supervisor_courses, reject_if:
+    lambda {|a| a[:user_id].blank?}, allow_destroy: true
 end
