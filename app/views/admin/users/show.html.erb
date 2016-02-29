@@ -28,13 +28,9 @@
             </tbody>
           </table>
         </div>
-        <br>
-        <div class="add-task-row">
-          <%= link_to t(".edit"), edit_admin_user_path(@user),
-            class: "btn btn-success btn-sm pull-left" %>
-          <%= link_to t(".add"), new_admin_user_path(@user),
-            class: "btn btn-default btn-sm pull-right" %>
-        </div>
+        <% if @user.trainee? %>
+          <%= render "user_courses" %>
+        <% end %>
       </div>
     </div>
   </div>

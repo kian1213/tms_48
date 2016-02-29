@@ -232,6 +232,14 @@ en:
         add: Add
       show_tasks:
         list: List of Tasks
+    user_tasks:
+      create:
+        success: User Task successfully updated!
+      destroy:
+        success: User Task successfully updated!
+    user_subjects:
+      update:
+        success: User Subject successfully updated!
     users:
       index:
         header_title: Users
@@ -248,6 +256,18 @@ en:
         type: User Type
         add: Add
         edit: Edit
+      user_courses:
+        title: Courses Assigned
+        start_date: Start Date
+        end_date: End Date
+        status: Status
+        subject_list: Subjects List
+        task_title: Task Title
+        status: Status
+        mark_unfinish: Mark as UnFinished
+        mark_finish: Mark as Finished
+        finish: Finished
+        not_finish: Not Finish
       new:
         header_title: Users
         title: Add User

@@ -16,4 +16,30 @@ class Course < ActiveRecord::Base
 
   accepts_nested_attributes_for :supervisor_courses, reject_if:
     lambda {|a| a[:user_id].blank?}, allow_destroy: true
+
+  before_save :get_last_user_course_id
+  after_update :create_user_subjects
+
+  private
+
+  def get_last_user_course_id
+    @prev_user_course_id =  UserCourse.last.id
+  end
+
+  def create_user_subjects
+    new_user_courses = UserCourse.where("id > ?", @prev_user_course_id)
+
+    if new_user_courses.any?
+      new_user_courses.map{|user_course|
+        user_course.course.course_subjects.each do|course|
+          UserSubject.create(
+            user_course_id: user_course.id,
+            user_id: user_course.user_id,
+            subject_id: course.subject_id,
+            status: "Not Finish"
+            )
+        end
+      }
+    end
+  end
 end
