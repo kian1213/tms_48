@@ -1,6 +1,7 @@
 class Admin::UsersController < AdminController
   def index
-    @users = User.all
+    @supervisors = User.supervisor
+    @trainees = User.trainee
   end
 
   def show
