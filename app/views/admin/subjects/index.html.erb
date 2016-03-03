@@ -20,7 +20,7 @@
           <% @subjects.each do |subject| %>
             <tr>
               <td><%= subject.title %></td>
-              <td><%= subject.instruction %></td>
+              <td><%= subject.instruction.truncate 30 %></td>
               <td>
                 <div class="admin-actions">
                   <%= link_to admin_subject_path(subject), class: "button btn btn-success btn-xs" do %>
