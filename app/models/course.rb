@@ -1,9 +1,10 @@
 class Course < ActiveRecord::Base
   has_many :supervisor_courses
-  has_many :users, through: :supervisor_courses
+  has_many :users, through: :supervisor_courses 
   has_many :course_subjects, dependent: :destroy
   has_many :subjects, through: :course_subjects
-  has_many :user_courses
+  has_many :user_courses 
+  has_many :trainees, through: :user_courses, class_name: User.name
 
   validates :title, presence: true
   validates :description, presence: true
