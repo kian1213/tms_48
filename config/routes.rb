@@ -22,6 +22,7 @@ Rails.application.routes.draw do
       resource :supervisor_courses
     end
     resources :subjects
+    resources :user_subjects
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

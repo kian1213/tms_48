@@ -1,0 +1,51 @@
+<h1><%= t ".title" %></h1>
+<div class="user-show-course">
+  <% @user.user_courses.each do |user_courses| %>
+    <ul>
+      <li><h2><%= user_courses.course.title %></h2></li>
+      <li><b><%= t ".start_date: " %></b><%= datetime user_courses.course.start_date %></li>
+      <li><b><%= t ".end_date: " %></b><%= datetime user_courses.course.end_date %></li>
+      <li><b><%= t ".status: " %></b><%= user_courses.course.status %></li>
+    </ul>
+    <div class="user-show-subjects">
+      <h3><%= t ".subject_list" %></h3>
+      <% user_courses.user_subjects.each do |user_subject| %>
+        <ul>
+          <li><h4><%= user_subject.subject.title %></h4></li>
+          <li>
+            <%= form_for [:admin, user_subject], url: admin_user_subject_path(user_subject) do |f| %>
+              <%= f.hidden_field :user_id, value: @user.id %>
+              <% if user_subject.status == "Finished" %>
+                <%= f.hidden_field :status, value: "Not Finish" %>
+                <%= f.submit t(".mark_unfinish"), class: "btn btn-sm btn-success" %>
+              <% else %>
+                <%= f.hidden_field :status, value: "Finished" %>
+                <%= f.submit t(".mark_finish"), class: "btn btn-sm btn-danger" %>
+              <% end %>
+            <% end %>
+          </li>
+        </ul>
+        <table class="table table-striped user-show-tasks">
+          <thead>
+            <tr>
+              <th><%= t ".task_title" %></th>
+              <th><%= t ".status" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% user_subject.subject.tasks.each do |task| %>
+              <tr>
+                <td class="user-show-task-title"><%= task.title %></td>
+                <% if @user_tasks.map{|user_task| user_task.task_id}.include? task.id %>
+                  <td><%= t ".finish" %></td>
+                <% else %>
+                  <td><%= t ".not_finish" %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -2,28 +2,23 @@
   <div class="box-body box-profile">
     <ul class="list-group list-group-unbordered">
       <li class="list-group-item">
-        <b><%= t ".text_myrecord" %></b> 
+        <b><%= t ".text_myrecord" %></b>
       </li>
       <li class="list-group-item">
-        <b><%= t ".text_activecourses" %></b> <a class="pull-right"><%= Course.count %></a>
+        <b><%= t ".text_activecourses" %></b>
+        <a class="pull-right"><%= @user.user_courses.count %></a>
       </li>
       <li class="list-group-item">
-        <b><%= t ".text_activesubjects" %></b> <a class="pull-right"><%= Subject.count %></a>
+        <b><%= t ".text_activesubjects" %></b>
+        <a class="pull-right">
+          <%= @user.user_courses.map{|user_course| user_course.course.subjects.count}.first.to_i %>
+        </a>
       </li>
       <li class="list-group-item">
-        <b><%= t ".text_taskcompleted" %></b> <a class="pull-right"><%= Course.count %></a>
-      </li>
-      <li class="list-group-item">
-        <b><%= t ".text_pendingtasks" %></b> <a class="pull-right"><%= Course.count %></a>
-      </li>
-      <li class="list-group-item">
-        <b><%= t ".text_coursesenrolled" %></b> <a class="pull-right"><%= Course.count %></a>
-      </li>
-      <li class="list-group-item">
-        <b><%= t ".text_coursescompleted" %></b> <a class="pull-right"><%= Course.count %></a>
-      </li>
-      <li class="list-group-item">
-        <b><%= t ".text_supervisors" %></b> <a class="pull-right"><%= Course.count %></a>
+        <b><%= t ".text_taskcompleted" %></b>
+        <a class="pull-right">
+          <%= @user.user_courses.map{|a|a.user_subjects.map{|b|b.user_tasks.map{}.count}.first}.first.to_i %>
+        </a>
       </li>
     </ul>
   </div>
