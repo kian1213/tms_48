@@ -60,6 +60,7 @@ en:
       tablink_profile: My profile
       tablink_setting: Edit my Profile
       tablink_login: Log In
+      tablink_login_supervisor: Log in as Supervisor
       tablink_logout: Log Out
     footer:
       footer_text: Learn on the go. We built the best for you.

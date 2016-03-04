@@ -34,6 +34,7 @@
           </li>
         <% else %>
           <li><%= link_to t(".tablink_login"), new_user_session_path %></li>
+          <li><%= link_to t(".tablink_login_supervisor"), "/admin" %></li>
         <% end %>
       </ul>
     </nav>

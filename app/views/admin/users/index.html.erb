@@ -8,41 +8,86 @@
           <%= t ".add" %>
         </i>
       <% end %>
-      <table class="table table-striped table-advance table-hover">
-        <hr>
-        <thead>
-          <tr>
-            <th><%= t ".avatar" %></th>
-            <th><%= t ".name" %></th>
-            <th><%= t ".email" %></th>
-            <th><%= t ".type" %></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <td><%= image_tag user.avatar, size: "50x50" %></td>
-              <td><%= user.full_name %></td>
-              <td><%= user.email %></td>
-              <td><%= user.user_type %></td>
-              <td>
-                <div class="admin-actions">
-                  <%= link_to admin_user_path(user), class: "button btn btn-success btn-xs" do %>
-                    <i class="fa fa-file-text"></i>
-                  <% end %>
-                  <%= link_to edit_admin_user_path(user), class: "button btn btn-primary btn-xs" do %>
-                    <i class="fa fa-pencil"></i>
-                  <% end %>
-                  <%= link_to admin_user_path(user), method: :delete,
-                    data: {confirm: t(".delete")},class: "button btn btn-danger btn-xs" do %>
-                    <i class="fa fa-trash-o"></i>
-                  <% end %>
-                </div>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#supervisor_index"><%= t ".supervisors" %></a></li>
+        <li><a href="#trainee_index"><%= t ".trainees" %></a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="supervisor_index" class="tab-pane fade in active">
+          <table class="table table-striped table-advance">
+            <hr>
+            <thead>
+              <tr>
+                <th><%= t ".avatar" %></th>
+                <th><%= t ".name" %></th>
+                <th><%= t ".email" %></th>
+                <th><%= t ".type" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @supervisors.each do |user| %>
+                <tr>
+                  <td><%= image_tag user.avatar, size: "50x50" %></td>
+                  <td><%= user.full_name %></td>
+                  <td><%= user.email %></td>
+                  <td><%= user.user_type %></td>
+                  <td>
+                    <div class="admin-actions">
+                      <%= link_to admin_user_path(user), class: "button btn btn-success btn-xs" do %>
+                        <i class="fa fa-file-text"></i>
+                      <% end %>
+                      <%= link_to edit_admin_user_path(user), class: "button btn btn-primary btn-xs" do %>
+                        <i class="fa fa-pencil"></i>
+                      <% end %>
+                      <%= link_to admin_user_path(user), method: :delete,
+                        data: {confirm: t(".delete")},class: "button btn btn-danger btn-xs" do %>
+                        <i class="fa fa-trash-o"></i>
+                      <% end %>
+                    </div>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <div id="trainee_index" class="tab-pane fade">
+          <table class="table table-striped table-advance table-hover">
+            <hr>
+            <thead>
+              <tr>
+                <th><%= t ".avatar" %></th>
+                <th><%= t ".name" %></th>
+                <th><%= t ".email" %></th>
+                <th><%= t ".type" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @trainees.each do |user| %>
+                <tr>
+                  <td><%= image_tag user.avatar, size: "50x50" %></td>
+                  <td><%= user.full_name %></td>
+                  <td><%= user.email %></td>
+                  <td><%= user.user_type %></td>
+                  <td>
+                    <div class="admin-actions">
+                      <%= link_to admin_user_path(user), class: "button btn btn-success btn-xs" do %>
+                        <i class="fa fa-file-text"></i>
+                      <% end %>
+                      <%= link_to edit_admin_user_path(user), class: "button btn btn-primary btn-xs" do %>
+                        <i class="fa fa-pencil"></i>
+                      <% end %>
+                      <%= link_to admin_user_path(user), method: :delete,
+                        data: {confirm: t(".delete")},class: "button btn btn-danger btn-xs" do %>
+                        <i class="fa fa-trash-o"></i>
+                      <% end %>
+                    </div>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </section>
